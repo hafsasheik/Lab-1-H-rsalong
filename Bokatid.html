@@ -13,40 +13,72 @@
 
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="index.html">Hem</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="Tjanster.html">Tjänster</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="Prislista.html">Prislista</a>
-        </li>
-        <li class="nav-item" >
-          <a class="nav-link" href="Bokatid.html">Boka Tid</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Annat
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="Bokatid.html">Kontakt</a></li>
-            <li><a class="dropdown-item" href="#">Bilder</a></li>
-          </ul>
-        </li>
-      </ul>
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">Hem</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="Tjanster.html">Tjänster</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Prislista.html">Prislista</a>
+          </li>
+          <li class="nav-item" >
+            <a class="nav-link" href="Bokatid.html">Boka Tid</a>
+          </li>
+          <li class="nav-item" >
+              <a class="nav-link" href="Kontakt.html">Kontakt</a>
+            </li>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
 
 <div class="container">
 
-
+    <h1>Boka tid</h1>
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Create" method="post">
+                <div class="form-group">
+                    <label for="pet-select">Välj tjänst:</label>
+                    <select name="pets" id="pet-select">
+                        <option value="">--Välj Tjänst--</option>
+                        <option value="dog">Klippning Kort</option>
+                        <option value="cat">Klippning Medel</option>
+                        <option value="hamster">Klippning Långt</option>
+                        <option value="parrot">Rakpermanens</option>
+                        <option value="spider">Färgning</option>
+                        <option value="goldfish">Toning</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Namn</label>
+                    <input class="form-control" asp-for="Name" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Email</label>
+                    <input class="form-control" asp-for="Minutes" />
+                    <span asp-validation-for="Minutes" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Telefonnummer</label>
+                    <input class="form-control" asp-for="Description" />
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+                <br>    
+                <div class="form-group">
+                    <input class="btn btn-primary" type="submit" value="Boka" />
+                </div>
+    
+            </form>
+        </div>
+    </div>
 
     
   </div>
