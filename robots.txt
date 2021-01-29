@@ -1,0 +1,7 @@
+# Google
+User-agent: Googlebot
+Disallow: /Bokatid/
+
+# Bing
+User-agent: msnbot
+Disallow: /Bokatid/
